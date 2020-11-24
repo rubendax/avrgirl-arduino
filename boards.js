@@ -35,6 +35,14 @@ var boards = [
     protocol: 'avr109'
   },
   {
+    name: 'proximidi',
+    baud: 57600,
+    signature: Buffer.from([0x43, 0x41, 0x54, 0x45, 0x52, 0x49, 0x4e]),
+    productId: ['0xeb58', '0x0036'],
+    productPage: 'https://store.arduino.cc/leonardo',
+    protocol: 'avr109'
+  },
+  {
     name: 'arduboy',
     baud: 57600,
     signature: Buffer.from([0x43, 0x41, 0x54, 0x45, 0x52, 0x49, 0x4e]),
