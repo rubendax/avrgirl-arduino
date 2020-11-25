@@ -8,13 +8,18 @@
 A NodeJS library for flashing compiled sketch files to Arduino microcontroller boards.
 
 ## Changes on this branch
-##### Fix for port/PID changing error - ```./lib/connection.js```  
-For ATMega**32u4** devices (onboard USB emulation) - The port name and/or ProductID can sometimes change during flashing. This patch attempts to fix the error, which would otherwise occur, by waiting for a new port with a **ProductID** which matches that of the target board.
+##### Fix for port/PID changing error in ```./lib/connection.js```  
+For ATMega**32u4** devices (onboard USB emulation) when connected as USD-HID or USB-MIDI device:
+The port name and/or ProductID can *sometimes* change during flashing. This patch attempts to fix the error, which would otherwise occur, by waiting for a new port that shows a **ProductID** which matches that of the target board.
 
 ## Acknowledgements
 
-**Author: [Suz Hinton](https://github.com/noopkat/)**
-Credit to [Jacob Rosenthal](https://github.com/jacobrosenthal), [Ryan Day](https://github.com/soldair), and [Elijah Insua](https://github.com/tmpvar) for a lot of the heavy lifting going on underneath in this library.
+**avrgirl-arduino author: [Suz Hinton](https://github.com/noopkat/)**
+
+Credit for a lot of the heavy lifting going on underneath in this library to:
+- [Jacob Rosenthal](https://github.com/jacobrosenthal)
+- Ryan Day](https://github.com/soldair)
+- [Elijah Insua](https://github.com/tmpvar)
 
 ## Contributors
 
