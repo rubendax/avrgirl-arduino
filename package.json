@@ -1,6 +1,6 @@
 {
   "name": "avrgirl-arduino",
-  "version": "4.4.0",
+  "version": "5.0.1",
   "description": "A NodeJS library for flashing compiled sketch files to Arduino microcontroller boards.",
   "bin": "./bin/cli.js",
   "main": "avrgirl-arduino-node.js",
@@ -10,7 +10,8 @@
     "lint": "eslint --fix \"tests/*.spec.js\" \"tests/helpers/*.js\" \"avrgirl-arduino.js\" \"lib/*.js\"",
     "tape": "tape \"tests/*.spec.js\" | tap-spec",
     "test": "npm run tape && npm run lint",
-    "cover": "istanbul cover ./tests/*.spec.js && istanbul-coveralls"
+    "cover": "istanbul cover ./tests/*.spec.js",
+    "demo": "sh -c 'node tests/demos/$1' --"
   },
   "repository": {
     "type": "git",
@@ -32,32 +33,36 @@
   },
   "homepage": "https://github.com/noopkat/avrgirl-arduino",
   "dependencies": {
-    "async": "^2.1.2",
+    "async": "^2.6.3",
     "awty": "^0.1.0",
-    "browser-serialport": "https://github.com/noopkat/browser-serialport#c8628c41c11890d3058875994c15f83f2df8185b",
-    "chip.avr.avr109": "^1.1.0",
-    "colors": "^1.1.2",
-    "graceful-fs": "^4.1.2",
+    "browser-serialport": "git+https://github.com/noopkat/browser-serialport.git#c8628c41c11890d3058875994c15f83f2df8185b",
+    "chip.avr.avr109": "^1.1.1",
+    "colors": "^1.4.0",
+    "graceful-fs": "^4.2.4",
     "intel-hex": "^0.1.2",
-    "jscs-loader": "^0.3.0",
-    "minimist": "^1.2.0",
-    "serialport": "^8.0.5",
+    "minimist": "^1.2.5",
+    "process": "^0.11.10",
+    "serialport": "^9.0.6",
     "stk500": "^2.0.3",
     "stk500-v2": "^1.0.4"
   },
   "devDependencies": {
-    "avrga-tester": "1.x",
+    "jscs-loader": "^0.3.0",
+    "util": "^0.12.3",
+    "buffer": "^6.0.3",
+    "stream-browserify": "^3.0.0",
+    "os-browserify": "^0.3.0",
     "eslint": "^6.5.0",
     "istanbul": "^0.4.0",
     "istanbul-coveralls": "^1.0.3",
     "proxyquire": "^1.7.3",
-    "sinon": "^4.1.2",
+    "sinon": "^9.2.3",
     "tap-spec": "^5.0.0",
-    "tape": "^4.2.1",
-    "terser-webpack-plugin": "^2.1.0",
+    "tape": "^5.1.1",
+    "terser-webpack-plugin": "^5.1.1",
     "virtual-serialport": "^0.3.1",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack": "^5.15.0",
+    "webpack-cli": "^3.3.12"
   },
   "browser": {
     "graceful-fs": false,
