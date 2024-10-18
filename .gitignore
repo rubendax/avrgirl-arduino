@@ -9,3 +9,5 @@ coverage
 # Files
 *.swp
 *.log
+.aider*
+.env
