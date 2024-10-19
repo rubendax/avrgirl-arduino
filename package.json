@@ -42,7 +42,7 @@
     "intel-hex": "^0.1.2",
     "minimist": "^1.2.5",
     "process": "^0.11.10",
-    "serialport": "^10.4.0",
+    "serialport": "^12.0.0",
     "stk500": "^2.0.3",
     "stk500-v2": "^1.0.4"
   },
@@ -61,8 +61,8 @@
     "tape": "^5.1.1",
     "terser-webpack-plugin": "^5.1.1",
     "virtual-serialport": "^0.3.1",
-    "webpack": "^5.15.0",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0"
   },
   "browser": {
     "graceful-fs": false,
