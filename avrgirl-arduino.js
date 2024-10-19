@@ -121,11 +121,11 @@ var injectDependencies = function(boards, Connection, protocols) {
    * Return a list of devices on serial ports. In addition to the output provided
    * by SerialPort.list, it adds a platform independent PID in _pid
    *
-   * @returns {Promise} A promise that resolves with the list of ports
+   * @param {function} callback - function to run upon completion/error
    */
   AvrgirlArduino.prototype.listPorts = AvrgirlArduino.listPorts =
-  AvrgirlArduino.prototype.list = AvrgirlArduino.list = function() {
-    return Connection.prototype._listPorts();
+  AvrgirlArduino.prototype.list = AvrgirlArduino.list = function(callback) {
+    return Connection.prototype._listPorts(callback);
   };
 
   /**
